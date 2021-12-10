@@ -70,7 +70,7 @@
 						"required": [
 							"ref_id",
 							"title",
-							"rationale",
+							"summary",
 							"url_fragment",
 							"success_criteria"
 						],
@@ -86,7 +86,7 @@
 							"type": "string",
 							"description": "ID value from which a fully-qualified URI can be constructed at which you can find information about this Guideline"
 						},
-						"rationale": {
+						"summary": {
 							"type": "string",
 							"description": "Text description of this guideline"
 						},
