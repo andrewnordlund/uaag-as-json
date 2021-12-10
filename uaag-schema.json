@@ -1,0 +1,179 @@
+{
+	"type": "object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "https://andrewnordlund.github.io/atag/uaag-schema.json",
+	"title" : "UAAG as JSON",
+	"description": "A JSON representation of UAAG 2.0",
+	"properties": {
+		"required" : ["title", "description", "version", "url", "base_url", "implementing_base_url", "parts"],
+		"title" : {
+			"description": "The title of the document",
+			"type" : "string"
+		},
+		"description" : {
+			"description": "Description of the document",
+			"type": "string"
+		},
+		"version" : {
+			"description" : "The version of UAAG this document describes",
+			"type" : "number"
+		},
+		"url" : {
+			"description" : "Fully qualified URI of UAAG document at W3C.",
+			"type" : "string"
+		},
+		"base_url" : {
+			"description" : "Fully qualified URI to serve as the Base URL for UAAG",
+			"type" : "string"
+		},
+		"implementation_base_url" : {
+			"description" : "Fully qualified URI for the Implementing UAAG document at W3C",
+			"type" : "string"
+		},
+		"principles" : {
+			"type" : "array",
+			"description" : "Text description of the Principle",
+			"properties": {
+				"required": [
+					"ref_id",
+					"title",
+					"url_fragment",
+					"guidelines"
+				],
+				"ref_id": {
+					"type": "string",
+					"description": "Unique numeric identifier for the Principle"
+				},
+				"title": {
+					"type": "string",
+					"description": "Title for the Principle"
+				},
+				"url_fragment": {
+					"type": "string",
+					"description": "ID Value from which a fully-qualified URI can be constructed at which you can find information about this Principle"
+				},
+				"notes" : {
+					"type" : "array",
+					"description" : "Notes about the principle",
+					"properties": {
+						"required" : ["content"],
+						"content": {
+							"type": "string",
+							"description": "Full text of the note"
+						}
+					}
+				},
+				"guidelines": {
+					"type": "array",
+					"description": "Array of guidelines which apply to the specific principle",
+					"properties": {
+						"required": [
+							"ref_id",
+							"title",
+							"summary",
+							"url_fragment",
+							"success_criteria"
+						],
+						"ref_id": {
+							"type": "string",
+							"description": "Unique identifier for the Guideline"
+						},
+						"title": {
+							"type": "string",
+							"description": "Title for the Guideline"
+						},
+						"url_fragment": {
+							"type": "string",
+							"description": "ID value from which a fully-qualified URI can be constructed at which you can find information about this Guideline"
+						},
+						"summary": {
+							"type": "string",
+							"description": "Text description of this guideline"
+						},
+						"notes" : {
+							"type" : "array",
+							"description" : "Notes about the specific Guideline"
+						},
+						"success_criteria": {
+							"type": "array",
+							"description": "Title for the Success Criteria",
+							"properties": {
+								"required": [
+									"ref_id",
+									"title",
+									"description",
+									"url_fragment",
+									"level"
+								],
+								"ref_id": {
+									"type": "string",
+									"description": "Unique identifier for the Success Criteria"
+								},
+								"title": {
+									"type": "string",
+									"description": "High level title for the Success Criteria"
+								},
+								"description": {
+									"type": "string",
+									"description": "Full text (minus title) for the Success Criteria"
+								},
+								"url_fragment": {
+									"type": "string",
+									"description": "ID value from which a fully-qualified URI can be constructed at which you can find information about this Success Criteria"
+								},
+								"level": {
+									"type": "string",
+									"description": "Indicates the appropriate conformance level for this success criteria",
+									"enum": [
+										"A",
+										"AA",
+										"AAA",
+										"A,AA,AAA"
+									]
+								},
+								"notes": {
+									"type": "array",
+									"description": "Any additional notes applicable to the Success Criteria",
+									"properties": {
+										"required" : ["content"],
+										"content": {
+											"type": "string",
+											"description": "Full text of the note"
+										}
+									}
+								},
+								"special_cases": {
+									"type": "array",
+									"description" : "To denote when there's a list, if the items in the list are all required, at least one is required, or a list of exceptions",
+									"properties": {
+										"required": [
+											"title"
+										],
+										"type": {
+											"type" : "string",
+											"descripton" : "If this specific case is an exception, one in a list where are all required, or one in a list where at least one is required",
+											"enum": [
+												null,
+												"exception",
+												"all_true",
+												"at_least_one"
+											]
+										},
+										"title": {
+											"type": "string",
+											"description": "Title for the special case"
+										},
+										"description": {
+											"type": "string",
+											"description": "Full text of the description"
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
