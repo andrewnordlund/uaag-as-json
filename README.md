@@ -1,5 +1,5 @@
 # UAAG as JSON
-This is meant to be like [WCAG as JSON](https://github.com/tenon-io/wcag-as-json) and [andrewnordlund/atag-as-json: ATAG Quick Reference in JSON](https://github.com/andrewnordlund/atag-as-json) but for UAAG.
+This is meant to be like [WCAG as JSON](https://github.com/tenon-io/wcag-as-json) and [atag-as-json - npm](https://www.npmjs.com/package/atag-as-json) but for UAAG.
 
 ## Relevant Links
 * [uaag-as-json - npm](https://www.npmjs.com/package/uaag-as-json)

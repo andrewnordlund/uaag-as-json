@@ -1,8 +1,8 @@
 {
   "name": "uaag-as-json",
-  "version": "0.1.0",
-  "description": "The Usage Agent Accessibility Guidelines in JSON format.",
-  "main": "index.js",
+  "version": "0.1.1",
+  "description": "The Usage Agent Accessibility Guidelines (UAAG) in JSON format.",
+  "main": "uaag.json",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,10 +11,11 @@
     "url": "git+https://github.com/andrewnordlund/uaag-as-json.git"
   },
   "keywords": [
-    "UAAG",
-    "A11y"
+    "uaag",
+    "a11y",
+    "accessibility"
   ],
-  "author": "Andrew Nordlund",
+  "author": "Andrew Nordlund <andrew.nordlund@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/andrewnordlund/uaag-as-json/issues"

@@ -3,8 +3,8 @@
 	"description" : "User Agent Accessibility Guidelines",
 	"version" : "2.0",
 	"url" : "https://www.w3.org/TR/UAAG20/",
-	"base_url" : "https://www.w3.org/TR/ATAG20/",
-	"reference_base_url" : "https://www.w3.org/TR/2015/",
+	"base_url" : "https://www.w3.org/TR/UAAG20/",
+	"reference_base_url" : "https://www.w3.org/TR/2015/NOTE-UAAG20-Reference-20151215/",
 	"principles" : 
 	[
 		{
